@@ -1,8 +1,6 @@
-# Object Relations Assessment
+# OO Review
 
-For this assignment, you will be creating a domain to track contributions that Authors make to Magazines. For the purposes of this lab, an Author has many Articles, a Magazine has many Articles, and Articles belong to both Author and Magazine.
-
-Note: It can be incredibly helpful to draw out what your domain will look like before you start coding.
+For this assignment, you will be creating a domain to track contributions that Bands, Venues, and Concerts.
 
 Your goal is to build out all of the methods listed below in 'deliverables'. Do your best to follow Ruby best practices. For example, use higher-level array methods such as `map`, `select`, and `find` when appropriate.
 
@@ -10,41 +8,54 @@ We've provided you with a console that you can use to test your code. To enter a
 
   --  Make sure you are testing your code as you go! --
 
-**To Submit** - once you've completed all the deliverables, please copy/paste your three class definitions into the `solution.rb` file. Please don't submit the lab until we give you the signal.
-
 #### Instructions
 
 The below are the methods that must be present on your models. Feel free to build out any helper methods, if needed.
 
+Band has many Concerts
+Venue has many Concerts
+
+Concert belongs to a Venue
+Concert belongs to a Band
+
+Band has many Venues, through Concerts
+Venues has many Bands, through Concerts
+
 ## Deliverables
 
-Build the following methods on the Author class
+Build the following methods on the Band class
 
-+ Author.all
-  + returns an array of all authors
-+ Author#articles
-  + returns a list of articles the author has written
-+ Author#magazines
-  + should return a list of magazines for which the author has written  
-+ Author#add_article(title, magazine)
-  + given a title and a magazine, creates a new article and associates it with that author and that magazine.
-+  Author#find_specialties
-   + returns the categories of the magazines for which the author has written
+<!-- + Band.all
+  + returns an array of all bands -->
+<!-- + Band#concerts
+  + returns a list of concerts at a specific band -->
+<!-- + Band#venues
+  + should return a list of venues for a specific band -->
+<!-- + Band#add_concert(date, attendance, venue)
+  + given a date, an attendance, and a venue, creates a new concert and associates it with that band and venue -->
+<!-- + Band#update_attendance(concert, number)
+  + changes the attendance for a concert given a number (only if the concert belongs to the band) -->
+<!-- + Band#average_sale_rate -->
 
-Build out the following methods on the Article class
+Build out the following methods on the Venue class
 
-+ Article.all
-  + returns an array of all articles
-+ Article#author
-  + returns the author for that given article
-+ Article#magazine
-  + returns the magazine for that given article
+<!-- + Venue.all
+  + returns an array of all venues -->
+<!-- + Venue.find_by_location(location)
+  + given a string of a location, returns all venues that match that location -->
+<!-- + Venue#concert_dates
+  + returns a list of the concert dates for a specific venue -->
+<!-- + Venue#bands
+  + returns a list of bands for a specific venue -->
+<!-- + Venue#average_attendance
+  + returns the average attendance for that specific venue -->
 
-Build out the following methods on the Magazine class
+Build out the following methods on the Concert class
 
-+ Magazine.all
-  + returns an array of all magazines
-+ Magazine.find_by_name(name)
-  + given a string of magazine name, returns the first magazine that matches
-+ Magazine#article_titles
-  + returns a list of the titles of all articles written for that magazine
+<!-- + Concert.all
+  + returns an array of all concerts -->
+<!-- + Concert#band
+  + returns the band for that given concert
++ Concert#venue
+  + returns the venue for that given concert -->
+<!-- + Attendance should be defaulted to nil -->
